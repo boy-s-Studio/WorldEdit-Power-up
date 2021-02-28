@@ -4,15 +4,19 @@ import com.sk89q.worldedit.IncompleteRegionException;
 import com.sk89q.worldedit.bukkit.BukkitAdapter;
 import com.sk89q.worldedit.bukkit.BukkitPlayer;
 import com.sk89q.worldedit.bukkit.WorldEditPlugin;
+import com.sk89q.worldedit.internal.annotation.Selection;
 import com.sk89q.worldedit.math.BlockVector3;
 import com.sk89q.worldedit.regions.Region;
 import com.sk89q.worldedit.world.World;
 import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import com.sk89q.worldedit.bukkit.WorldEditPlugin;
 
 public final class Main extends JavaPlugin {
 
@@ -60,6 +64,12 @@ public final class Main extends JavaPlugin {
 
             p.sendMessage(max.toString() + ", " + min.toString());
 
+        }
+        
+        if(label.equalsIgnoreCase("test")) {
+            Selection sel = getWorldEdit().getSelection(p.getWorld());
+            Location pos1 = sel.getMaximumPoint();
+            Location pos2 = sel.getMinimumPoint();
         }
         return false;
     }
