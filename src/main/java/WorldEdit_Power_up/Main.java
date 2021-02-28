@@ -67,9 +67,17 @@ public final class Main extends JavaPlugin {
         }
         
         if(label.equalsIgnoreCase("test")) {
-            Selection sel = getWorldEdit().getSelection(p.getWorld());
-            Location pos1 = sel.getMaximumPoint();
-            Location pos2 = sel.getMinimumPoint();
+            Region region = null;
+            BukkitPlayer bplayer = BukkitAdapter.adapt(p);
+            try{
+                region = wep.getSession(p).getSelection((World) p.getWorld());
+            }
+            catch(IncompleteRegionException e) {
+                e.printStackTrace();
+            }
+            BlockVector3 pos1 = region.getMaximumPoint();
+            BlockVector3 pos2 = region.getMinimumPoint();
+
         }
         return false;
     }
