@@ -12,13 +12,18 @@ import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.TabExecutor;
 import org.bukkit.entity.Player;
+import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.sk89q.worldedit.bukkit.WorldEditPlugin;
 
-public final class Main extends JavaPlugin {
+import java.util.Arrays;
+import java.util.List;
+
+public final class Main extends JavaPlugin implements TabExecutor, Listener {
 
     @Override
     public void onEnable() {
@@ -80,6 +85,12 @@ public final class Main extends JavaPlugin {
 
         }
         return false;
+    }
+
+    @Override
+    public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
+
+        return null;
     }
 
 }
