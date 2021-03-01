@@ -38,10 +38,9 @@ public final class Main extends JavaPlugin implements TabExecutor, Listener {
 
     public WorldEditPlugin getWorldEdit() {
         Plugin p = Bukkit.getServer().getPluginManager().getPlugin("worldEdit");
-        if(p instanceof WorldEditPlugin) {
+        if (p instanceof WorldEditPlugin) {
             return (WorldEditPlugin) p;
-        }
-        else {
+        } else {
             return null;
         }
 
@@ -53,15 +52,14 @@ public final class Main extends JavaPlugin implements TabExecutor, Listener {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
         Player p = (Player) sender;
-        if(label.equalsIgnoreCase("/check")) {
+        if (label.equalsIgnoreCase("/check")) {
 
             Region region = null;
 
             BukkitPlayer bplayer = BukkitAdapter.adapt(p);
             try {
                 region = wep.getSession(p).getSelection((World) p.getWorld());
-            }
-            catch(IncompleteRegionException e) {
+            } catch (IncompleteRegionException e) {
                 e.printStackTrace();
             }
 
@@ -71,14 +69,13 @@ public final class Main extends JavaPlugin implements TabExecutor, Listener {
             p.sendMessage(max.toString() + ", " + min.toString());
 
         }
-        
-        if(label.equalsIgnoreCase("test")) {
+
+        if (label.equalsIgnoreCase("test")) {
             Region region = null;
             BukkitPlayer bplayer = BukkitAdapter.adapt(p);
-            try{
+            try {
                 region = wep.getSession(p).getSelection((World) p.getWorld());
-            }
-            catch(IncompleteRegionException e) {
+            } catch (IncompleteRegionException e) {
                 e.printStackTrace();
             }
             BlockVector3 pos1 = region.getMaximumPoint();
@@ -87,15 +84,24 @@ public final class Main extends JavaPlugin implements TabExecutor, Listener {
         }
         return false;
     }
-
+/*
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
+        if (command.getName().equals("")) {
+            if (args.length == 1) {
 
+            }
+            else if(args.length == 2) {
+
+            }
+            else if(args.length == 3) {
+
+            }
+        }
         return null;
     }
 
-}
-/*
 Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "명령어"); // 콘솔에서 명령어 실행
 Bukkit.dispatchCommand(플레이어, "명령어"); // 플레이어의 권한으로 명령어 실행
  */
+}
