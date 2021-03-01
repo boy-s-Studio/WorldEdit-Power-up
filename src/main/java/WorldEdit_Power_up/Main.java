@@ -25,8 +25,6 @@ public final class Main extends JavaPlugin {
         getCommand("/check").setExecutor(new Command_check());
         getCommand("test").setExecutor(new Commands_test());
 
-
-
     }
 
     @Override
