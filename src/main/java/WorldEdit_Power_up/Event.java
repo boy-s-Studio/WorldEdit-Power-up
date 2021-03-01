@@ -9,6 +9,8 @@ public class Event implements Listener {
     @EventHandler
     public void join(PlayerJoinEvent e) {
 
+        e.setJoinMessage(e.getPlayer() + "님이 입장하셨습니다");
+
     }
 
 }
