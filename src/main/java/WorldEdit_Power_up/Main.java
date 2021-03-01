@@ -14,6 +14,11 @@ public final class Main extends JavaPlugin {
         System.out.println("플러그인 활성화");
         wep = getWorldEdit();
         Bukkit.getPluginManager().registerEvents(new Event(), this);
+
+        //command class
+        getCommand("/check").setExecutor(new commands());
+        getCommand("test").setExecutor(new commands());
+
     }
 
     @Override
