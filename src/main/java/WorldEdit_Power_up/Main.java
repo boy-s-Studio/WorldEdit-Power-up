@@ -1,5 +1,7 @@
 package WorldEdit_Power_up;
 
+import WorldEdit_Power_up.Commands.Command_check;
+import WorldEdit_Power_up.Commands.Commands_test;
 import com.sk89q.worldedit.bukkit.WorldEditPlugin;
 
 import org.bukkit.Bukkit;
@@ -20,8 +22,8 @@ public final class Main extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new Event(), this);
 
         //command class
-        getCommand("/check").setExecutor(new commands());
-        getCommand("test").setExecutor(new commands());
+        getCommand("/check").setExecutor(new Command_check());
+        getCommand("test").setExecutor(new Commands_test());
 
 
 
