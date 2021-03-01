@@ -27,6 +27,7 @@ public class Commands_test implements CommandExecutor, TabExecutor {
         if (label.equalsIgnoreCase("test")) {
             System.out.println("test");
         }
+
         return false;
     }
 
