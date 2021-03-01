@@ -23,6 +23,8 @@ public final class Main extends JavaPlugin {
         getCommand("/check").setExecutor(new commands());
         getCommand("test").setExecutor(new commands());
 
+
+
     }
 
     @Override
