@@ -1,4 +1,4 @@
 name: WorldEdit_Power_up
 version: ${project.version}
-main: WorldEdit-Power-up.Main
+main: WorldEdit_Power_up.Main
 api-version: 1.16
