@@ -6,10 +6,15 @@ import com.sk89q.worldedit.bukkit.WorldEditPlugin;
 
 import org.bukkit.Bukkit;
 
+import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.io.File;
+
 public final class Main extends JavaPlugin {
+
+    public ConsoleCommandSender console = Bukkit.getConsoleSender();
 
     @Override
     public void onEnable() {
