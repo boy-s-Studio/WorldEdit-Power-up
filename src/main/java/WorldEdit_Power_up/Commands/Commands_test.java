@@ -25,16 +25,7 @@ public class Commands_test implements CommandExecutor, TabExecutor {
         Player p = (Player) sender;
 
         if (label.equalsIgnoreCase("test")) {
-            Region region = null;
-            BukkitPlayer bplayer = BukkitAdapter.adapt(p);
-            try {
-                region = wep.getSession(p).getSelection((World) p.getWorld());
-            } catch (IncompleteRegionException e) {
-                e.printStackTrace();
-            }
-            BlockVector3 pos1 = region.getMaximumPoint();
-            BlockVector3 pos2 = region.getMinimumPoint();
-
+            System.out.println("test");
         }
         return false;
     }
