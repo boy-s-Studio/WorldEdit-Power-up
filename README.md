@@ -1,7 +1,6 @@
 # WorldEdit-Power-up
 
 - 개발자 : boy0710boy, boyboy0710
-- 아이디어 : boy0710boy
 - 종속성 플러그인 : WorldEdit
 
 # 명령어
