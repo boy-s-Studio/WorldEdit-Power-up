@@ -56,8 +56,18 @@ public final class Main extends JavaPlugin {
 
     WorldEditPlugin wep;
 
+}
+
 /*
 Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "명령어"); // 콘솔에서 명령어 실행
 Bukkit.dispatchCommand(플레이어, "명령어"); // 플레이어의 권한으로 명령어 실행
  */
-}
+
+/*
+대충 아이디어
+1.mode 추가
+ ex) brush mode, read mode 등등
+     명령어로 변경
+2.
+3.
+ */
