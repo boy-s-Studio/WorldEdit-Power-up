@@ -9,6 +9,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabExecutor;
 import org.bukkit.entity.Player;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class Commands_test implements CommandExecutor, TabExecutor {
@@ -21,8 +22,15 @@ public class Commands_test implements CommandExecutor, TabExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         Player p =(Player) sender;
         if (label.equalsIgnoreCase("test")) {
-            World w = p.getWorld();
-            w.setGameRule(GameRule.COMMAND_BLOCK_OUTPUT , true);
+            if(args[0].equalsIgnoreCase("true")){
+                World w = p.getWorld();
+                w.setGameRule(GameRule.DO_TILE_DROPS , true);
+            }
+            else if(args[0].equalsIgnoreCase("false")) {
+                World w = p.getWorld();
+                w.setGameRule(GameRule.DO_TILE_DROPS , false);
+            }
+
         }
 
         return false;
@@ -30,7 +38,12 @@ public class Commands_test implements CommandExecutor, TabExecutor {
 
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
+        if (command.getName().equals("test")) {
+            if (args.length == 1) {
+                return Arrays.asList("true", "false");
+            }
 
+        }
         return null;
     }
 }
