@@ -28,7 +28,10 @@ public final class Main extends JavaPlugin {
 
         //command class
         getCommand("/check").setExecutor(new Command_check());
+        getCommand("/check").setTabCompleter(new Command_check());
+
         getCommand("test").setExecutor(new Commands_test());
+        getCommand("test").setTabCompleter(new Commands_test());
 
     }
 
