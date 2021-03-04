@@ -31,8 +31,6 @@ public final class Main extends JavaPlugin {
         getCommand("test").setExecutor(new Commands_test());
         getCommand("test").setTabCompleter(new Commands_test());
 
-
-
     }
 
     @Override
