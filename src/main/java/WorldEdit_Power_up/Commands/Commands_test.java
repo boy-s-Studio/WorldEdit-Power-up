@@ -31,6 +31,7 @@ public class Commands_test implements CommandExecutor, TabExecutor {
                 w.setGameRule(GameRule.DO_TILE_DROPS , false);
             }
 
+
         }
 
         return false;

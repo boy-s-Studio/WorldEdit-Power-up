@@ -36,7 +36,7 @@ public class Command_check implements CommandExecutor, TabExecutor {
             BlockVector3 max = region.getMaximumPoint();
             BlockVector3 min = region.getMinimumPoint();
 
-            p.sendMessage(max.toString() + ", " + min.toString());
+            p.sendMessage("첫번째 위치:" + max.toString() + ", 두번째 위치:" + min.toString());
 
         }
 
