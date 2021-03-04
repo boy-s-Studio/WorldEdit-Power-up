@@ -53,9 +53,6 @@ public final class Main extends JavaPlugin {
         } else {
             return null;
         }
-
     }
-
     WorldEditPlugin wep;
-
 }
