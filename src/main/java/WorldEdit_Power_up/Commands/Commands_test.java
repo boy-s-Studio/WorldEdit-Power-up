@@ -15,9 +15,7 @@ import java.util.List;
 public class Commands_test implements CommandExecutor, TabExecutor {
 
     WorldEditPlugin wep;
-
-
-
+    
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         Player p =(Player) sender;
@@ -25,6 +23,7 @@ public class Commands_test implements CommandExecutor, TabExecutor {
             if(args[0].equalsIgnoreCase("true")){
                 World w = p.getWorld();
                 w.setGameRule(GameRule.DO_TILE_DROPS , true);
+                System.out.println("");
             }
             else if(args[0].equalsIgnoreCase("false")) {
                 World w = p.getWorld();
