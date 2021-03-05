@@ -4,7 +4,7 @@ Bukkit.dispatchCommand(플레이어, "명령어"); // 플레이어의 권한으�
 
 
 
-대충 아이디어
+아이디어
 1.mode 추가
 ex) brush mode, read mode 등등
 명령어로 변경

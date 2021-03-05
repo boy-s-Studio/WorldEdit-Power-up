@@ -2,6 +2,7 @@ package WorldEdit_Power_up;
 
 import WorldEdit_Power_up.Commands.Command_check;
 import WorldEdit_Power_up.Commands.Commands_test;
+import WorldEdit_Power_up.boyboy0710.Easter_Egg;
 import com.sk89q.worldedit.bukkit.WorldEditPlugin;
 
 import org.bukkit.Bukkit;
@@ -31,6 +32,8 @@ public final class Main extends JavaPlugin {
         getCommand("test").setExecutor(new Commands_test());
         getCommand("test").setTabCompleter(new Commands_test());
 
+        getCommand("boyboy0710").setExecutor(new Easter_Egg());
+        getCommand("boyboy0710").setTabCompleter(new Easter_Egg());
 
     }
 
@@ -56,4 +59,3 @@ public final class Main extends JavaPlugin {
     WorldEditPlugin wep;
 
 }
-
