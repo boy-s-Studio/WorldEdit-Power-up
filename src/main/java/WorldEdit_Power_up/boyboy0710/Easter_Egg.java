@@ -25,8 +25,6 @@ public class Easter_Egg implements CommandExecutor, TabExecutor {
                 p.kickPlayer("이스터애그였습니다");
             }
 
-
-
         }
 
         return false;
