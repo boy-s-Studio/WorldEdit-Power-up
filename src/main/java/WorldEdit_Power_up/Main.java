@@ -12,9 +12,9 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Main extends JavaPlugin {
-
+    
     public ConsoleCommandSender console = Bukkit.getConsoleSender();
-
+    
     @Override
     public void onEnable() {
         System.out.println("-----------------------------------------------------------------------------");
@@ -24,19 +24,21 @@ public final class Main extends JavaPlugin {
         System.out.println("-----------------------------------------------------------------------------");
         wep = getWorldEdit();
         Bukkit.getPluginManager().registerEvents(new Event(), this);
-
+        
         //command class
         getCommand("/check").setExecutor(new Command_check());
         getCommand("/check").setTabCompleter(new Command_check());
-
+        
         getCommand("test").setExecutor(new Commands_test());
         getCommand("test").setTabCompleter(new Commands_test());
 
         getCommand("boyboy0710").setExecutor(new Easter_Egg());
         getCommand("boyboy0710").setTabCompleter(new Easter_Egg());
-
+        getCommand("boy0710boy").setExecutor(new Easter_Egg());
+        getCommand("boy0710boy").setTabCompleter(new Easter_Egg());
+        
     }
-
+    
     @Override
     public void onDisable() {
         System.out.println("-----------------------------------------------------------------------------");
@@ -45,7 +47,7 @@ public final class Main extends JavaPlugin {
         System.out.println("    최신버전 다운 사이트 : https://github.com/boy-s-Studio/WorldEdit-Power-up");
         System.out.println("-----------------------------------------------------------------------------");
     }
-
+    
     public WorldEditPlugin getWorldEdit() {
         Plugin p = Bukkit.getServer().getPluginManager().getPlugin("worldEdit");
         if (p instanceof WorldEditPlugin) {
@@ -53,6 +55,9 @@ public final class Main extends JavaPlugin {
         } else {
             return null;
         }
+    
     }
+
     WorldEditPlugin wep;
+
 }

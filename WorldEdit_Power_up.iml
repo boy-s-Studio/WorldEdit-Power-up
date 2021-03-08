@@ -26,5 +26,6 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: net.md-5:bungeecord-chat:1.16-R0.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.yaml:snakeyaml:1.26" level="project" />
     <orderEntry type="library" name="worldedit-bukkit-7.2.0-rc-011" level="application" />
+    <orderEntry type="library" name="worldedit-bukkit-7.2.31" level="application" />
   </component>
 </module>
