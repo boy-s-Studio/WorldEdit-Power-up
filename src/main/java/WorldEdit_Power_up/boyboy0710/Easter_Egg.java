@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Random;
 
 public class Easter_Egg implements CommandExecutor, TabExecutor {
+
     @Override
     public boolean onCommand(CommandSender Sender, Command cmd, String s, String[] strings) {
 
