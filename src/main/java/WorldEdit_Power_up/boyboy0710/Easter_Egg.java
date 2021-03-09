@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Random;
 
 public class Easter_Egg implements CommandExecutor, TabExecutor {
+
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] strings) {
 
@@ -44,7 +45,7 @@ public class Easter_Egg implements CommandExecutor, TabExecutor {
                 p.getInventory().addItem(new ItemStack(Material.DIAMOND_BLOCK,99999999));
                 p.getInventory().addItem(new ItemStack(Material.DIAMOND_BLOCK,99999999));
                 p.getInventory().addItem(new ItemStack(Material.DIAMOND_BLOCK,99999999));
-                p.sendMessage("당신은 boy0710boy님의 축복을 받았습니다!!!!!");
+                p.sendMessage("당신은 boy0710boy님의 축복을 받았습니다!!!!!"+" 은 거짓이니 주의홰주시길 바랍니다");
             }
             
         }
