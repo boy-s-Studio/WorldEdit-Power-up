@@ -48,6 +48,10 @@ public class Easter_Egg implements CommandExecutor, TabExecutor {
             }
             
         }
+    
+        if(cmd.getName().equalsIgnoreCase("test")) {
+            sender.sendMessage("text");
+        }
 
         return false;
     }
