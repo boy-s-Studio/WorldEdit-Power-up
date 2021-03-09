@@ -18,9 +18,10 @@ public class Commands_test implements CommandExecutor, TabExecutor {
     
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        Player p =(Player) sender;
         if (label.equalsIgnoreCase("test")) {
-            if(args[0].equalsIgnoreCase("true")){
+            System.out.println("-----------------------------------------------------------------------------");
+           
+           /* if(args[0].equalsIgnoreCase("true")){
                 World w = p.getWorld();
                 w.setGameRule(GameRule.DO_TILE_DROPS , true);
                 System.out.println("");
@@ -28,7 +29,7 @@ public class Commands_test implements CommandExecutor, TabExecutor {
             else if(args[0].equalsIgnoreCase("false")) {
                 World w = p.getWorld();
                 w.setGameRule(GameRule.DO_TILE_DROPS , false);
-            }
+            }*/
 
 
         }

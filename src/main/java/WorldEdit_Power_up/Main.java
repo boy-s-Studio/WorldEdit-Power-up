@@ -7,7 +7,10 @@ import com.sk89q.worldedit.bukkit.WorldEditPlugin;
 
 import org.bukkit.Bukkit;
 
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -37,8 +40,6 @@ public final class Main extends JavaPlugin {
 
         getCommand("boy0710boy").setExecutor(new Easter_Egg());
         getCommand("boy0710boy").setTabCompleter(new Easter_Egg());
-        getCommand("text").setExecutor(new Easter_Egg());
-        getCommand("text").setTabCompleter(new Easter_Egg());
         
     }
     
@@ -60,7 +61,7 @@ public final class Main extends JavaPlugin {
         }
     
     }
-
+    
     WorldEditPlugin wep;
 
 }
