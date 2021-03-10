@@ -1,13 +1,10 @@
 package WorldEdit_Power_up.Commands;
 
 import com.sk89q.worldedit.bukkit.WorldEditPlugin;
-import org.bukkit.GameRule;
-import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabExecutor;
-import org.bukkit.entity.Player;
 
 import java.util.Arrays;
 import java.util.List;
@@ -20,10 +17,10 @@ public class Commands_test implements CommandExecutor, TabExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (label.equalsIgnoreCase("test")) {
             System.out.println("-----------------------------------------------------------------------------");
-           
+
            /* if(args[0].equalsIgnoreCase("true")){
                 World w = p.getWorld();
-                w.setGameRule(GameRule.DO_TILE_DROPS , true);
+                w.setGameRule(GameRule.DO_TILE_DROPS , true);z
                 System.out.println("");
             }
             else if(args[0].equalsIgnoreCase("false")) {
