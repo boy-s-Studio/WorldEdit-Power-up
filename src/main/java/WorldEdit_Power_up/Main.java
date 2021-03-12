@@ -13,7 +13,7 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Main extends JavaPlugin {
-    
+
     public ConsoleCommandSender console = Bukkit.getConsoleSender();
     
     @Override
@@ -39,7 +39,7 @@ public final class Main extends JavaPlugin {
 
         getCommand("boy0710boy").setExecutor(new Easter_Egg());
         getCommand("boy0710boy").setTabCompleter(new Easter_Egg());
-        
+
     }
     
     @Override

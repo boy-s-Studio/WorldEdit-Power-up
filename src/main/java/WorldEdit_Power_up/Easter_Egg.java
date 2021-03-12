@@ -1,6 +1,7 @@
 package WorldEdit_Power_up;
 
 import org.bukkit.Material;
+import org.bukkit.block.Biome;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -18,15 +19,7 @@ public class Easter_Egg implements CommandExecutor, TabExecutor {
 
         if(cmd.getName().equalsIgnoreCase("boyboy0710")) {
             Player p =(Player) sender;
-            Random r = new Random();
-            int kick = r.nextInt();
-
-            if(kick == 10000) {
-                p.sendMessage("당신은 엄청난 행운아?! 은 거짓이오니 유의해 주시기 바랍니");
-            }
-            else {
-                p.kickPlayer("boyboy0710의 악독한 성격으로 인하여 킥당했습니다");
-            }
+                p.getEyeLocation().getBlock().setBiome(Biome.BADLANDS);
 
         }
         
