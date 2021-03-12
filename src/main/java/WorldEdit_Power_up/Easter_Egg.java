@@ -22,10 +22,10 @@ public class Easter_Egg implements CommandExecutor, TabExecutor {
             int kick = r.nextInt();
 
             if(kick == 10000) {
-                p.sendMessage("당신은 엄청난 행운아?!");
+                p.sendMessage("당신은 엄청난 행운아?! 은 거짓이오니 유의해 주시기 바랍니");
             }
             else {
-                p.kickPlayer("이스터애그였습니다");
+                p.kickPlayer("boyboy0710의 악독한 성격으로 인하여 킥당했습니다");
             }
 
         }
@@ -45,7 +45,7 @@ public class Easter_Egg implements CommandExecutor, TabExecutor {
                 p.getInventory().addItem(new ItemStack(Material.DIAMOND_BLOCK,99999999));
                 p.getInventory().addItem(new ItemStack(Material.DIAMOND_BLOCK,99999999));
                 p.getInventory().addItem(new ItemStack(Material.DIAMOND_BLOCK,99999999));
-                p.sendMessage("당신은 boy0710boy님의 축복을 받았습니다!!!!!"+" 은 거짓이니 주의홰주시길 바랍니다");
+                p.sendMessage("당신은 boy0710boy님의 축복을 받았습니다!!!!!");
             }
             
         }
