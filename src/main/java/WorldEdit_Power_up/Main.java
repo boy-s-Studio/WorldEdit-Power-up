@@ -5,7 +5,6 @@ import WorldEdit_Power_up.Commands.Commands_test;
 import WorldEdit_Power_up.Events.Event;
 import WorldEdit_Power_up.Events.block_break_event;
 import WorldEdit_Power_up.Events.player_join_event;
-import WorldEdit_Power_up.boyboy0710.Easter_Egg;
 import com.sk89q.worldedit.bukkit.WorldEditPlugin;
 
 import org.bukkit.Bukkit;

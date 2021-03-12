@@ -1,4 +1,4 @@
-package WorldEdit_Power_up.boyboy0710;
+package WorldEdit_Power_up;
 
 import org.bukkit.Material;
 import org.bukkit.command.Command;
