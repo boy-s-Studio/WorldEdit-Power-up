@@ -20,7 +20,7 @@ public class Commands_test implements CommandExecutor, TabExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         Player p = (Player) sender;
         
-        if(args[0].equalsIgnoreCase("true")){
+        if(args[0].equalsIgnoreCase("true")) {
             World w = p.getWorld();
             w.setGameRule(GameRule.DO_TILE_DROPS , true);
             System.out.println("");
