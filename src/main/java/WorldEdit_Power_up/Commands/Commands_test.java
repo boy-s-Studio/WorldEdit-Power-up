@@ -18,7 +18,7 @@ public class Commands_test implements CommandExecutor, TabExecutor {
     
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        Player p = (Player) sender;
+        /* Player p = (Player) sender;
         
         if(args[0].equalsIgnoreCase("true")) {
             World w = p.getWorld();
@@ -29,18 +29,19 @@ public class Commands_test implements CommandExecutor, TabExecutor {
             World w = p.getWorld();
             w.setGameRule(GameRule.DO_TILE_DROPS , false);
         }
-
+            */
+        
         return false;
     }
 
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
-        if (command.getName().equals("test")) {
+        /* if (command.getName().equals("test")) {
             if (args.length == 1) {
                 return Arrays.asList("true", "false");
             }
 
-        }
+        }  */
         return null;
     }
 }
