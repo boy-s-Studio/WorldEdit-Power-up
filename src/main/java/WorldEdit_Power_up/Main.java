@@ -2,7 +2,6 @@ package WorldEdit_Power_up;
 
 import WorldEdit_Power_up.Commands.Command_check;
 import WorldEdit_Power_up.Commands.Commands_test;
-import WorldEdit_Power_up.Events.Event;
 import WorldEdit_Power_up.Events.block_break_event;
 import WorldEdit_Power_up.Events.player_join_event;
 import com.sk89q.worldedit.bukkit.WorldEditPlugin;
@@ -25,7 +24,6 @@ public final class Main extends JavaPlugin {
         System.out.println("    최신버전 다운 사이트 : https://github.com/boy-s-Studio/WorldEdit-Power-up");
         System.out.println("-----------------------------------------------------------------------------");
         wep = getWorldEdit();
-        Bukkit.getPluginManager().registerEvents(new Event(), this);
         Bukkit.getPluginManager().registerEvents(new player_join_event(), this);
         Bukkit.getPluginManager().registerEvents(new block_break_event(), this);
         
