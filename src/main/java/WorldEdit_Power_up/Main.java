@@ -23,7 +23,6 @@ public final class Main extends JavaPlugin {
         System.out.println("                  WorldEdit_Power_up 를러그인을 불러왔습니다");
         System.out.println("                  플러그인 제작자 : boy0710boy, boyboy0710");
         System.out.println("    최신버전 다운 사이트 : https://github.com/boy-s-Studio/WorldEdit-Power-up");
-        System.out.println(getConfig().getString("test"));
         System.out.println("-----------------------------------------------------------------------------");
         wep = getWorldEdit();
         Bukkit.getPluginManager().registerEvents(new player_join_event(), this);
