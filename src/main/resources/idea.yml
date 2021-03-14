@@ -9,3 +9,57 @@ Bukkit.dispatchCommand(플레이어, "명령어"); // 플레이어의 권한으�
 ex) brush mode, read mode 등등
 명령어로 변경
 
+Files backup {
+
+private Main plugin;
+private FileConfiguration dataconfig = null;
+private File configFile = null;
+
+
+//생성자
+public void DataManager(Main plugin) {
+this.plugin = plugin;
+plugin.saveDefaultConfig();
+}
+
+//config load
+public void reloadConfig() {
+if(this.configFile == null) {
+this.configFile = new File(this.plugin.getDataFolder(), "data.yml");
+}
+
+this.dataconfig = YamlConfiguration.loadConfiguration(this.configFile);
+
+InputStream defaultStream = this.plugin.getResource("data.yml");
+if(defaultStream != null) {
+YamlConfiguration defaultconfig = YamlConfiguration.loadConfiguration(new InputStreamReader(defaultStream));
+this.dataconfig.setDefaults(defaultconfig);
+}
+}
+
+public FileConfiguration getConfig() {
+if(this.dataconfig == null) reloadConfig();
+return this.dataconfig;
+}
+
+public void saveConfig() {
+if(this.dataconfig == null || this.configFile == null) return;
+
+try {
+this.getConfig().save(this.configFile);
+} catch (IOException e) {
+this.plugin.getLogger().log(Level.SEVERE, "파일을 저장할수 없습니다", e);
+}
+}
+
+public void saveDefaultConfig() {
+if(this.configFile == null) this.configFile = new File(this.plugin.getDataFolder(), "data.yml");
+
+if(!this.configFile.exists()) {
+this.plugin.saveResource("data.yml", false);
+}
+}
+
+}
+
+
