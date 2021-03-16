@@ -1,4 +1,4 @@
-package WorldEdit_Power_up.Commands;
+package WorldEdit_Power_up.Files;
 
 import WorldEdit_Power_up.Main;
 import org.bukkit.command.Command;
@@ -9,15 +9,15 @@ import org.bukkit.command.TabExecutor;
 import java.util.List;
 
 public class config_test implements CommandExecutor, TabExecutor {
-    
+
     String test = Main.getPlugin(Main.class).getConfig().getString("test");
-    String power_up = Main.getPlugin(Main.class).getConfig().getString("power_up");
+    boolean power_up = Main.getPlugin(Main.class).getConfig().getBoolean("power_up");
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
         if(label.equalsIgnoreCase("config_test")) {
-            if(power_up == "true"){
+            if(power_up == true){
                 System.out.println(test);
             }
             else {

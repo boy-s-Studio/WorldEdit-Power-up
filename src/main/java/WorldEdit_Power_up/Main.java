@@ -2,7 +2,7 @@ package WorldEdit_Power_up;
 
 import WorldEdit_Power_up.Commands.Command_check;
 import WorldEdit_Power_up.Commands.Commands_test;
-import WorldEdit_Power_up.Commands.config_test;
+import WorldEdit_Power_up.Files.config_test;
 import WorldEdit_Power_up.Events.block_break_event;
 import WorldEdit_Power_up.Events.player_join_event;
 import com.sk89q.worldedit.bukkit.WorldEditPlugin;
@@ -47,6 +47,8 @@ public final class Main extends JavaPlugin {
         //config.yml
         getConfig().options().copyDefaults(true);
         saveConfig();
+
+
 
     }
     
