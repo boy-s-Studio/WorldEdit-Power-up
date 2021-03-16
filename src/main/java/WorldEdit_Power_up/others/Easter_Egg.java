@@ -1,4 +1,4 @@
-package WorldEdit_Power_up;
+package WorldEdit_Power_up.others;
 
 import org.bukkit.Material;
 import org.bukkit.block.Biome;
