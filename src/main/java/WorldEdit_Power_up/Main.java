@@ -2,7 +2,8 @@ package WorldEdit_Power_up;
 
 import WorldEdit_Power_up.Commands.Command_check;
 import WorldEdit_Power_up.Commands.Commands_test;
-import WorldEdit_Power_up.Files.config_test;
+import WorldEdit_Power_up.config_File.config_reload;
+import WorldEdit_Power_up.config_File.config_test;
 import WorldEdit_Power_up.Events.block_break_event;
 import WorldEdit_Power_up.Events.player_join_event;
 import WorldEdit_Power_up.others.Easter_Egg;
@@ -39,12 +40,14 @@ public final class Main extends JavaPlugin {
         getCommand("config_test").setExecutor(new config_test());
         getCommand("config_test").setTabCompleter(new config_test());
 
+        getCommand("config_reload").setExecutor(new config_reload());
+        getCommand("config_reload").setTabCompleter(new config_reload());
+
         getCommand("boyboy0710").setExecutor(new Easter_Egg());
         getCommand("boyboy0710").setTabCompleter(new Easter_Egg());
 
         getCommand("boy0710boy").setExecutor(new Easter_Egg());
         getCommand("boy0710boy").setTabCompleter(new Easter_Egg());
-        
         //config.yml
         getConfig().options().copyDefaults(true);
         saveConfig();

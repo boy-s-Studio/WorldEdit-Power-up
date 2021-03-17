@@ -1,4 +1,4 @@
-package WorldEdit_Power_up.Files;
+package WorldEdit_Power_up.config_File;
 
 import WorldEdit_Power_up.Main;
 import org.bukkit.command.Command;
@@ -10,26 +10,26 @@ import java.util.List;
 
 public class config_test implements CommandExecutor, TabExecutor {
 
-    String test = Main.getPlugin(Main.class).getConfig().getString("test");
-    boolean power_up = Main.getPlugin(Main.class).getConfig().getBoolean("power_up");
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
         if(label.equalsIgnoreCase("config_test")) {
-
-            if(args[0].length() != 0) {
-                int test_1 = Integer.parseInt(args[0]);
-                Main.getPlugin(Main.class).getConfig().set("test", test_1);
-
-            }
-            if(power_up == true){
+                String s = "와 대성공";
+                //config를 불러온다
+                String test = Main.getPlugin(Main.class).getConfig().getString("test");
+                //config 값을 설정한다
+                Main.getPlugin(Main.class).getConfig().set("test", s);
+                //컨피그 값을 저장한다
+                Main.getPlugin(Main.class).saveConfig();
+                //컨피그를 리로드 한다
+                Main.getPlugin(Main.class).reloadConfig();
+                //프린트 한다
                 System.out.println(test);
+
             }
-            else {
-                System.out.println("power_up값을 true로 바꿔주세요");
-            }
-        }
+
+
         return false;
     }
     
