@@ -52,6 +52,9 @@ public final class Main extends JavaPlugin {
         else {
             System.out.println("config.yml에 있는 power_up 부분을 true 바꿔주십시오");
         }
+    
+        getCommand("config_reload").setExecutor(new config_reload());
+        getCommand("config_reload").setTabCompleter(new config_reload());
         
         wep = getWorldEdit();
         
