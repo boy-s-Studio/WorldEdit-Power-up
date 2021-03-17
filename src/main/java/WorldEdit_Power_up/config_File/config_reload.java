@@ -16,7 +16,7 @@ public class config_reload implements CommandExecutor, TabExecutor {
         if(label.equalsIgnoreCase("config_reload")) {
 
             Main.getPlugin(Main.class).reloadConfig();
-
+            System.out.println("config.yml이 reload 되었습니다");
         }
 
 
