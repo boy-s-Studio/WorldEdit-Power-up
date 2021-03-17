@@ -7,5 +7,6 @@ commands:
   /check:
   config_test:
   config_reload:
+  config_save:
   boyboy0710:
   boy0710boy:

@@ -55,15 +55,15 @@ public final class Main extends JavaPlugin {
     
         getCommand("config_reload").setExecutor(new config_reload());
         getCommand("config_reload").setTabCompleter(new config_reload());
+    
+        getCommand("config_save").setExecutor(new config_reload());
+        getCommand("config_save").setTabCompleter(new config_reload());
         
         wep = getWorldEdit();
         
         
         //config.yml
         getConfig().options().copyDefaults(true);
-        saveConfig();
-
-
 
     }
     

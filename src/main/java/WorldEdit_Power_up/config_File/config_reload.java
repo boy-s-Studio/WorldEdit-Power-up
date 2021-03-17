@@ -18,6 +18,12 @@ public class config_reload implements CommandExecutor, TabExecutor {
             Main.getPlugin(Main.class).reloadConfig();
 
         }
+    
+        if(label.equalsIgnoreCase("config_save")) {
+        
+            Main.getPlugin(Main.class).saveConfig();
+        
+        }
 
 
         return false;
