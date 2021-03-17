@@ -7,6 +7,7 @@
 
 - //check : 선택한 두 지점의 좌표를 나타낸다
 - /config_reload : config.yml을 reload한다
+- /config_save : config.yml파일을 저장한다
 
 # 기타
 - 이 플러그인은 WorldEdit 플러그인을 기반으로한 플러그인이며 worldEdit 7.2.3버전을 미리 적용시켜 놓아야 합니다
