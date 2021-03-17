@@ -17,6 +17,12 @@ public class config_test implements CommandExecutor, TabExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
         if(label.equalsIgnoreCase("config_test")) {
+
+            if(args[0].length() != 0) {
+                int test_1 = Integer.parseInt(args[0]);
+                Main.getPlugin(Main.class).getConfig().set("test", test_1);
+
+            }
             if(power_up == true){
                 System.out.println(test);
             }
