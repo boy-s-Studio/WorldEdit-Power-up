@@ -1,7 +1,6 @@
 package WorldEdit_Power_up;
 
 import WorldEdit_Power_up.Commands.Command_check;
-import WorldEdit_Power_up.Commands.Commands_test;
 import WorldEdit_Power_up.config_File.config_reload;
 import WorldEdit_Power_up.config_File.config_test;
 import WorldEdit_Power_up.Events.block_break_event;
@@ -33,9 +32,6 @@ public final class Main extends JavaPlugin {
         //command class
         getCommand("/check").setExecutor(new Command_check());
         getCommand("/check").setTabCompleter(new Command_check());
-        
-        getCommand("test").setExecutor(new Commands_test());
-        getCommand("test").setTabCompleter(new Commands_test());
 
         getCommand("config_test").setExecutor(new config_test());
         getCommand("config_test").setTabCompleter(new config_test());
