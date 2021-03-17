@@ -6,6 +6,7 @@ api-version: 1.16
 commands:
   /check:
   test:
+  config_test:
+  config_reload:
   boyboy0710:
   boy0710boy:
-  config_test:

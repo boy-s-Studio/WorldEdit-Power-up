@@ -48,6 +48,7 @@ public final class Main extends JavaPlugin {
 
         getCommand("boy0710boy").setExecutor(new Easter_Egg());
         getCommand("boy0710boy").setTabCompleter(new Easter_Egg());
+        
         //config.yml
         getConfig().options().copyDefaults(true);
         saveConfig();
