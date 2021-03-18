@@ -55,9 +55,6 @@ public final class Main extends JavaPlugin {
     
             getCommand("boy0710boy").setExecutor(new Easter_Egg());
             getCommand("boy0710boy").setTabCompleter(new Easter_Egg());
-    
-            getCommand("+-*/").setExecutor(new Easter_Egg());
-            getCommand("+-*/").setTabCompleter(new Easter_Egg());
             
             getCommand("power_up").setExecutor(new others_power_up());
             getCommand("power_up").setTabCompleter(new others_power_up());
