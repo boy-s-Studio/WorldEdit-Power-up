@@ -55,7 +55,7 @@ public class Easter_Egg implements CommandExecutor, TabExecutor {
     
             if(args[1].equalsIgnoreCase("+")) {
                 num = num_1 + num_2;
-                System.out.println("결과:" + num);
+                System.out.println(num);
             }
             
             if(args[2].length() != 2) {
