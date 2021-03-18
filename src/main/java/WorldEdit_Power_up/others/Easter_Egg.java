@@ -57,6 +57,21 @@ public class Easter_Egg implements CommandExecutor, TabExecutor {
                 num = num_1 + num_2;
                 System.out.println(num);
             }
+    
+            if(args[1].equalsIgnoreCase("-")) {
+                num = num_1 - num_2;
+                System.out.println(num);
+            }
+    
+            if(args[1].equalsIgnoreCase("*")) {
+                num = num_1 * num_2;
+                System.out.println(num);
+            }
+    
+            if(args[1].equalsIgnoreCase("+")) {
+                num = num_1 / num_2;
+                System.out.println(num);
+            }
             
             if(args[2].length() != 2) {
                 num_2 = Integer.parseInt(args[2]);
