@@ -8,6 +8,7 @@ import WorldEdit_Power_up.Events.block_break_event;
 import WorldEdit_Power_up.Events.player_join_event;
 import WorldEdit_Power_up.others.Easter_Egg;
 import WorldEdit_Power_up.others.others_power_up;
+import WorldEdit_Power_up.tests.test;
 import com.sk89q.worldedit.bukkit.WorldEditPlugin;
 
 import org.bukkit.Bukkit;
@@ -60,6 +61,8 @@ public final class Main extends JavaPlugin {
             
             getCommand("power_up").setExecutor(new others_power_up());
             getCommand("power_up").setTabCompleter(new others_power_up());
+
+
     
         }
         
@@ -72,6 +75,9 @@ public final class Main extends JavaPlugin {
     
         getCommand("config_save").setExecutor(new config_reload());
         getCommand("config_save").setTabCompleter(new config_reload());
+
+        getCommand("Calculation").setExecutor(new test());
+        getCommand("Calculation").setTabCompleter(new test());
         
         wep = getWorldEdit();
         
