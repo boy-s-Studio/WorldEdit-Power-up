@@ -50,7 +50,6 @@ public class test implements CommandExecutor, TabCompleter {
                 num = num_1 / num_2;
                 System.out.println("결과:" + num);
             }
-
         }
 
         return false;
@@ -65,7 +64,6 @@ public class test implements CommandExecutor, TabCompleter {
             }
 
         }
-
         return null;
     }
 }
