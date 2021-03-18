@@ -81,7 +81,6 @@ public final class Main extends JavaPlugin {
         //config.yml
         getConfig().options().copyDefaults(true);
 
-
         if(this.getConfig().getBoolean("power_up") == false){
             saveConfig();
         }
