@@ -34,9 +34,9 @@ public class others_power_up implements CommandExecutor, TabExecutor {
     @Override
     public List<String> onTabComplete(CommandSender commandSender, Command command, String s, String[] args) {
 
-        if (command.getName().equals("custom_mob")) {
+        if (command.getName().equals("power_up")) {
             if (args.length == 1) {
-                return Arrays.asList("help", "bat");
+                return Arrays.asList("true", "false");
             }
 
 
