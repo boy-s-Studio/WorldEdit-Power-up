@@ -53,4 +53,5 @@ public class Command_save_loc implements CommandExecutor, TabExecutor {
     public List<String> onTabComplete(CommandSender commandSender, Command command, String s, String[] strings) {
         return null;
     }
+
 }
