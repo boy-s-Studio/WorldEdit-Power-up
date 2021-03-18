@@ -1,11 +1,13 @@
 package WorldEdit_Power_up;
 
 import WorldEdit_Power_up.Commands.Command_check;
+import WorldEdit_Power_up.Commands.Command_save_loc;
 import WorldEdit_Power_up.config_File.config_reload;
 import WorldEdit_Power_up.config_File.config_test;
 import WorldEdit_Power_up.Events.block_break_event;
 import WorldEdit_Power_up.Events.player_join_event;
 import WorldEdit_Power_up.others.Easter_Egg;
+import WorldEdit_Power_up.others.others_power_up;
 import com.sk89q.worldedit.bukkit.WorldEditPlugin;
 
 import org.bukkit.Bukkit;
@@ -37,6 +39,9 @@ public final class Main extends JavaPlugin {
             //command class
             getCommand("/check").setExecutor(new Command_check());
             getCommand("/check").setTabCompleter(new Command_check());
+
+            getCommand("/save_loc").setExecutor(new Command_save_loc());
+            getCommand("/save_loc").setTabCompleter(new Command_save_loc());
     
             getCommand("config_test").setExecutor(new config_test());
             getCommand("config_test").setTabCompleter(new config_test());
@@ -49,6 +54,9 @@ public final class Main extends JavaPlugin {
     
             getCommand("boy0710boy").setExecutor(new Easter_Egg());
             getCommand("boy0710boy").setTabCompleter(new Easter_Egg());
+
+            getCommand("power_up").setExecutor(new others_power_up());
+            getCommand("power_up").setTabCompleter(new others_power_up());
     
         }
         
@@ -66,6 +74,11 @@ public final class Main extends JavaPlugin {
         
         //config.yml
         getConfig().options().copyDefaults(true);
+
+
+        if(this.getConfig().getBoolean("power_up") == false){
+            saveConfig();
+        }
 
     }
     

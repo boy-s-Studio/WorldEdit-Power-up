@@ -5,6 +5,7 @@ api-version: 1.16
 
 commands:
   /check:
+  /save_loc:
   config_test:
   config_reload:
   config_save:
