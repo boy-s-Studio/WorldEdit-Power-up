@@ -26,6 +26,13 @@ public class config_test implements CommandExecutor, TabExecutor {
 
             }
 
+        if(label.equalsIgnoreCase("test")) {
+
+            if(args[0].length() != 0) {
+                Integer.parseInt(args[2]);
+            }
+
+        }
 
         return false;
     }
