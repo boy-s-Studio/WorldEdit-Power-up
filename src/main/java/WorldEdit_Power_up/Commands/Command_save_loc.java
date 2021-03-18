@@ -21,7 +21,7 @@ public class Command_save_loc implements CommandExecutor, TabExecutor {
     WorldEditPlugin wep;
 
     @Override
-    public boolean onCommand(CommandSender Sender, Command cmad, String s, String[] strings) {
+    public boolean onCommand(CommandSender Sender, Command cmd, String s, String[] strings) {
 
         if(s.equalsIgnoreCase("/save_loc")) {
             Player p =(Player) Sender;

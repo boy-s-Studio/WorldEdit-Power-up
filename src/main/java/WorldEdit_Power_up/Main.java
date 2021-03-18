@@ -7,6 +7,7 @@ import WorldEdit_Power_up.config_File.config_test;
 import WorldEdit_Power_up.Events.block_break_event;
 import WorldEdit_Power_up.Events.player_join_event;
 import WorldEdit_Power_up.others.Easter_Egg;
+import WorldEdit_Power_up.others.others_power_up;
 import com.sk89q.worldedit.bukkit.WorldEditPlugin;
 
 import org.bukkit.Bukkit;
@@ -25,7 +26,7 @@ public final class Main extends JavaPlugin {
     
     @Override
     public void onEnable() {
-        if(power_up == "false") {
+        if(power_up == "true") {
             System.out.println("-----------------------------------------------------------------------------");
             System.out.println("                  WorldEdit_Power_up 를러그인을 불러왔습니다");
             System.out.println("                  플러그인 제작자 : boy0710boy, boyboy0710");
@@ -53,6 +54,9 @@ public final class Main extends JavaPlugin {
     
             getCommand("boy0710boy").setExecutor(new Easter_Egg());
             getCommand("boy0710boy").setTabCompleter(new Easter_Egg());
+
+            getCommand("power_up").setExecutor(new others_power_up());
+            getCommand("power_up").setTabCompleter(new others_power_up());
     
         }
         
