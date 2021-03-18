@@ -15,7 +15,7 @@ import java.util.Random;
 public class Easter_Egg implements CommandExecutor, TabExecutor {
 
     @Override
-    public boolean onCommand(CommandSender sender, Command cmd, String s, String[] strings) {
+    public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
 
         if(cmd.getName().equalsIgnoreCase("boyboy0710")) {
             Player p =(Player) sender;
@@ -42,6 +42,22 @@ public class Easter_Egg implements CommandExecutor, TabExecutor {
             }
             
         }
+    
+        if(cmd.getName().equalsIgnoreCase("+")) {
+    
+            if (args[0].length() != 0) {
+        
+                int first = Integer.parseInt(args[0]);
+        
+            }
+    
+            if (args[1].length() != 1) {
+        
+                int second = Integer.parseInt(args[0]);
+        
+        
+            }
+        }
         
         return false;
     }
@@ -49,5 +65,6 @@ public class Easter_Egg implements CommandExecutor, TabExecutor {
     @Override
     public List<String> onTabComplete(CommandSender commandSender, Command command, String s, String[] strings) {
         return null;
+        
     }
 }
