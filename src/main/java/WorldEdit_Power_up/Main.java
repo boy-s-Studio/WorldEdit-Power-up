@@ -25,7 +25,7 @@ public final class Main extends JavaPlugin {
     
     @Override
     public void onEnable() {
-        if(power_up == "true") {
+        if(power_up == "false") {
             System.out.println("-----------------------------------------------------------------------------");
             System.out.println("                  WorldEdit_Power_up 를러그인을 불러왔습니다");
             System.out.println("                  플러그인 제작자 : boy0710boy, boyboy0710");
@@ -70,6 +70,11 @@ public final class Main extends JavaPlugin {
         
         //config.yml
         getConfig().options().copyDefaults(true);
+
+
+        if(this.getConfig().getBoolean("power_up") == false){
+            saveConfig();
+        }
 
     }
     
