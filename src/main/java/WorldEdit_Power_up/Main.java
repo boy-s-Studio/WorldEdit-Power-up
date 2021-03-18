@@ -18,7 +18,10 @@ import org.bukkit.plugin.java.JavaPlugin;
 public final class Main extends JavaPlugin {
 
     public ConsoleCommandSender console = Bukkit.getConsoleSender();
+    
     String power_up = this.getConfig().getString("power_up");
+    
+    WorldEditPlugin wep;
     
     @Override
     public void onEnable() {
@@ -65,7 +68,6 @@ public final class Main extends JavaPlugin {
         
         wep = getWorldEdit();
         
-        
         //config.yml
         getConfig().options().copyDefaults(true);
 
@@ -98,7 +100,5 @@ public final class Main extends JavaPlugin {
         }
     
     }
-    
-    WorldEditPlugin wep;
 
 }
