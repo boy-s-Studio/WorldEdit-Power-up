@@ -33,6 +33,7 @@ public class Easter_Egg implements CommandExecutor, TabExecutor {
             }
             
             else {
+                
                 p.getInventory().addItem(new ItemStack(Material.DIAMOND_BLOCK,99999999));
                 p.getInventory().addItem(new ItemStack(Material.DIAMOND_BLOCK,99999999));
                 p.getInventory().addItem(new ItemStack(Material.DIAMOND_BLOCK,99999999));
