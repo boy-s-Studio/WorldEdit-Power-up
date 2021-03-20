@@ -8,17 +8,18 @@ import org.bukkit.command.TabExecutor;
 
 import java.util.List;
 
-public class config_reload implements CommandExecutor, TabExecutor {
+public class config_save implements CommandExecutor, TabExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-
-        if(label.equalsIgnoreCase("config_reload")) {
-
-            Main.getPlugin(Main.class).reloadConfig();
-            System.out.println("config.yml이 reload 되었습니다");
-        }
     
+        if(label.equalsIgnoreCase("config_save")) {
+        
+            Main.getPlugin(Main.class).saveConfig();
+        
+        }
+
+
         return false;
     }
 
