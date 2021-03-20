@@ -15,6 +15,7 @@ public class config_test implements CommandExecutor, TabExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
         if(label.equalsIgnoreCase("config_test")) {
+            
                 String s = "와 대성공";
                 
                 String test = Main.getPlugin(Main.class).getConfig().getString("test");  //config를 불러온다
