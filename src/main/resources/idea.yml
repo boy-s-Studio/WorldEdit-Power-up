@@ -63,3 +63,74 @@ Files backup {
 }
 
 
+
+
+
+
+
+
+
+  [up]
+
+  <normal>
+  scoreboard players set <nickname> tick 0
+
+  <chin>
+  scoreboard players set <nickname> time 0
+
+
+  <roop>
+  scoreboard players add <nickname> tick 1
+
+
+  <roop>
+  execute as @a[scores:{tick=1}] at @s run scoreboard players @s add time 1
+
+  <chin, if, all>
+  execute as @a[scores:{tick=20}] at @s run scoreboard players @s set tick 0
+
+
+  [down]
+
+  <normal>
+  scoreboard players set <nickname> tick 0
+
+  <chin>
+  scoreboard players set <nickname> time 3
+
+
+  <roop>
+  scoreboard players add <nickname> tick 1
+
+
+  <roop>
+  execute as @a[scores:{time=0}] at @s run scoreboard players @s set tick 0
+
+  <chin, all>
+  execute as @a[scores:{time=0}] at @s run title @s title {"text":"time over"}
+
+  <chin, all>
+  execute as @a[scores:{time=0}] at @s run setblock x y z redstone_block
+
+  <chin, all>
+  execute as @a[scores:{time=0}] at @s run scoreboard players @s set time 3
+
+
+  <roop>
+  execute as @a[scores:{tick=1}] at @s run scoreboard players @s add time -1
+
+  <chin, if , all>
+  execute as @a[scores:{tick=20}] at @s run scoreboard players @s set tick 0
+
+
+  <normal>
+  setblock x y z air
+
+  <chin, all>
+  setblock x y z air
+
+  <chin, all>
+  setblock x y z air
+
+  <chin, all>
+  setblock x y z air
