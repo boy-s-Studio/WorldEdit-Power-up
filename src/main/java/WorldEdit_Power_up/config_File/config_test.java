@@ -27,10 +27,13 @@ public class config_test implements CommandExecutor, TabExecutor {
 
             }
 
-        if(label.equalsIgnoreCase("test")) {
+        if(cmd.getName().equalsIgnoreCase("test")) {
+            if(args.length == 2) {
+                if(args[0].length() != 0) {
+                    String s = args[0];
+                    System.out.println(s);
+                }
 
-            if(args[0].length() != 0) {
-                Integer.parseInt(args[2]);
             }
 
         }
