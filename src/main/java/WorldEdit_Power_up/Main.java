@@ -78,6 +78,9 @@ public final class Main extends JavaPlugin {
 
         getCommand("Calculation").setExecutor(new test());
         getCommand("Calculation").setTabCompleter(new test());
+
+        getCommand("test").setExecutor(new config_test());
+        getCommand("test").setTabCompleter(new config_test());
         
         wep = getWorldEdit();
         
