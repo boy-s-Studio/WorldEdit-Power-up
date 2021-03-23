@@ -3,6 +3,7 @@ package WorldEdit_Power_up;
 import WorldEdit_Power_up.Commands.Command_check;
 import WorldEdit_Power_up.Commands.Command_save_loc;
 import WorldEdit_Power_up.config_File.config_reload;
+import WorldEdit_Power_up.config_File.config_save;
 import WorldEdit_Power_up.config_File.config_test;
 import WorldEdit_Power_up.Events.block_break_event;
 import WorldEdit_Power_up.Events.player_join_event;
@@ -70,8 +71,8 @@ public final class Main extends JavaPlugin {
         getCommand("config_reload").setExecutor(new config_reload());
         getCommand("config_reload").setTabCompleter(new config_reload());
     
-        getCommand("config_save").setExecutor(new config_reload());
-        getCommand("config_save").setTabCompleter(new config_reload());
+        getCommand("config_save").setExecutor(new config_save());
+        getCommand("config_save").setTabCompleter(new config_save());
 
         getCommand("Calculation").setExecutor(new test());
         getCommand("Calculation").setTabCompleter(new test());
