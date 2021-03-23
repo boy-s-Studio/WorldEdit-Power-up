@@ -17,10 +17,9 @@ public class Easter_Egg implements CommandExecutor, TabExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
 
-        if(cmd.getName().equalsIgnoreCase("boyboy0710")) {
-            
-            Player p =(Player) sender;
-            p.getEyeLocation().getBlock().setBiome(Biome.BADLANDS);
+
+        if(cmd.getName().equalsIgnoreCase("WA_Sands")) {
+
 
         }
         
