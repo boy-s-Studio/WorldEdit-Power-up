@@ -1,6 +1,7 @@
 package WorldEdit_Power_up.Commands;
 
 import WorldEdit_Power_up.Main;
+import WorldEdit_Power_up.imports.CraftPlayer;
 import com.sk89q.worldedit.IncompleteRegionException;
 import com.sk89q.worldedit.bukkit.BukkitAdapter;
 import com.sk89q.worldedit.bukkit.BukkitPlayer;
@@ -12,6 +13,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabExecutor;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 
 import java.util.List;
@@ -56,6 +58,11 @@ public class Command_save_loc implements CommandExecutor, TabExecutor {
     @Override
     public List<String> onTabComplete(CommandSender commandSender, Command command, String s, String[] strings) {
         return null;
+    }
+
+    public void test(Entity e, Player p) {
+        e.setInvulnerable(true);
+        CraftPlayer cp = (CraftPlayer) p;
     }
 
 }
