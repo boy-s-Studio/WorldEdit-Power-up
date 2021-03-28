@@ -10,6 +10,8 @@ import java.util.List;
 
 public class test implements CommandExecutor, TabCompleter {
 
+    private final boolean test = true;
+
     @Override
     public boolean onCommand(CommandSender Sender, Command cmd, String s, String[] args) {
 

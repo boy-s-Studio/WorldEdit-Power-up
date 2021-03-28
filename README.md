@@ -5,8 +5,8 @@
 
 # 명령어
 
-- //check : 선택한 두 지점의 좌표를 나타낸다
-- //save_loc : 마지막으로 선택한 두 지점을 config 파일에 저장한다
+- //check : 선택한 두 지점의 좌표를 나타낸다 
+- //save_loc : 마지막으로 선택한 두 지점을 config 파일에 저장한다 
 - /config_reload : config.yml을 reload한다
 - /config_save : config.yml파일을 저장한다
 
