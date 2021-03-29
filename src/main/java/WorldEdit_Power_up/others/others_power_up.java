@@ -25,7 +25,6 @@ public class others_power_up implements CommandExecutor, TabExecutor {
                 Main.getPlugin(Main.class).reloadConfig();
             }
 
-
         }
 
         return false;
