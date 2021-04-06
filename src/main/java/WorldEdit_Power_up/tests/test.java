@@ -5,6 +5,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -26,7 +27,7 @@ public class test implements CommandExecutor, TabCompleter {
                     num_1 = Integer.parseInt(args[2]);
                 }
             }
-
+     
             if(args[0].equalsIgnoreCase("num_2")) {
                 if(args[1].length() != 0) {
                     num_2 = Integer.parseInt(args[2]);
@@ -36,6 +37,7 @@ public class test implements CommandExecutor, TabCompleter {
             if(args[0].equalsIgnoreCase("+")) {
                 num = num_1 + num_2;
                 System.out.println("결과:" + num);
+
             }
 
             if(args[0].equalsIgnoreCase("-")) {
