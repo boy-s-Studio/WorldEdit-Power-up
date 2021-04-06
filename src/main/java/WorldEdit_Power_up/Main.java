@@ -37,7 +37,7 @@ public final class Main extends JavaPlugin {
             
             Bukkit.getPluginManager().registerEvents(new player_join_event(), this);
             Bukkit.getPluginManager().registerEvents(new block_break_event(), this);
-    
+            
             //command class
             getCommand("/check").setExecutor(new Command_check());
             getCommand("/check").setTabCompleter(new Command_check());
