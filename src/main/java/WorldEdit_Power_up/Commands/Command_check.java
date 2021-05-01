@@ -27,10 +27,16 @@ public class Command_check implements CommandExecutor, TabExecutor {
             Region region = null;
 
             BukkitPlayer bplayer = BukkitAdapter.adapt(p);
+            
             try {
+                
+                
                 region = wep.getSession(p).getSelection((World) p.getWorld());
-            } catch (IncompleteRegionException e) {
+            }
+            
+            catch (IncompleteRegionException e) {
                 e.printStackTrace();
+                
             }
 
             BlockVector3 max = region.getMaximumPoint();

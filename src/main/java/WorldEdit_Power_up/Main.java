@@ -65,7 +65,9 @@ public final class Main extends JavaPlugin {
         }
         
         else {
+            
             System.out.println("config.yml에 있는 power_up 부분을 true 바꿔주십시오");
+            
         }
     
         getCommand("config_reload").setExecutor(new config_reload());
@@ -86,7 +88,10 @@ public final class Main extends JavaPlugin {
         getConfig().options().copyDefaults(true);
 
         if(this.getConfig().getBoolean("power_up") == false){
+            
             saveConfig();
+            
+            
         }
 
     }
@@ -113,8 +118,12 @@ public final class Main extends JavaPlugin {
         Plugin p = Bukkit.getServer().getPluginManager().getPlugin("worldEdit");
         if (p instanceof WorldEditPlugin) {
             return (WorldEditPlugin) p;
-        } else {
+        }
+        
+        else {
+            
             return null;
+            
         }
     
     }

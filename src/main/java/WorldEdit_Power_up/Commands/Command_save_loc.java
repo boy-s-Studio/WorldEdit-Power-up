@@ -26,13 +26,19 @@ public class Command_save_loc implements CommandExecutor, TabExecutor {
     public boolean onCommand(CommandSender Sender, Command cmd, String s, String[] strings) {
 
         if(s.equalsIgnoreCase("/save_loc")) {
+            
             Player p =(Player) Sender;
             Region region = null;
             BukkitPlayer bplayer = BukkitAdapter.adapt(p);
 
             try {
+                
                 region = wep.getSession(p).getSelection((World) p.getWorld());
-            } catch (IncompleteRegionException e) {
+                
+            }
+            
+            catch (IncompleteRegionException e) {
+                
                 e.printStackTrace();
             }
 
@@ -47,9 +53,12 @@ public class Command_save_loc implements CommandExecutor, TabExecutor {
             System.out.println("마지막으로 지정된 위치를 저장하였습니다");
             System.out.println("첫번째 위치:" + max +" " + "두번째 위치:" + min);
         }
+        
         if (s.equalsIgnoreCase("/load_loc")) {
+            
             System.out.println("마지막으로 저장된 위치를 로드하였습니다");
             System.out.println("첫번째 위치:" + Main.getPlugin(Main.class).getConfig().getString("loc_1") + " " + "두번째 위치:" + Main.getPlugin(Main.class).getConfig().getString("loc_2"));
+        
         }
 
         return false;
@@ -61,8 +70,10 @@ public class Command_save_loc implements CommandExecutor, TabExecutor {
     }
 
     public void test(Entity e, Player p) {
+        
         e.setInvulnerable(true);
         CraftPlayer cp = (CraftPlayer) p;
+        
     }
 
 }
